@@ -16,7 +16,7 @@ Syntax highlighted code block
 ### Header 3
 
 - etch/sketch
-[code](https://github.com/The-tiny-asian/programing-one/raw/master/etchysketch.pde)
+[code](https://github.com/The-tiny-asian/programing-one/blob/master/etchysketch.pde)
 (picture)
 - List
 
