@@ -17,7 +17,7 @@ Syntax highlighted code block
 
 - etch/sketch
 [code](https://github.com/The-tiny-asian/programing-one/blob/master/etchysketch.pde)
-(picture)
+![picture](https://github.com/The-tiny-asian/programing-one/raw/master/Screen%20Shot%202018-04-13%20at%201.40.24%20PM.png)
 - List
 
 1. Numbered
