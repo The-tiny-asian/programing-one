@@ -1,0 +1,32 @@
+class Car {
+  //member variables
+  color c;
+  float xpos;
+  float ypos;
+  float xspeed;
+  //constucter
+  Car(color tempC, float tempXpos, float tempYpos,float tempXspeed) { 
+    c = tempC;
+    xpos = tempXpos;
+    ypos = tempYpos;
+    xspeed = tempXspeed;
+  }
+  void display () {
+    fill(c);
+    rectMode(CENTER);
+    rect(xpos, ypos, 35, 20);
+    rect(xpos, ypos, 10, 5);
+    rect(xpos+10, ypos-10, 10, 3);
+    rect(xpos-10, ypos-10, 10, 3);
+    rect(xpos+10, ypos+10, 10, 3);
+    rect(xpos-10, ypos+10, 10, 3);
+    rect(xpos+14, ypos, 5, 15);
+  }
+
+  void drive() {
+    xpos = xpos + xspeed;
+    if (xpos >width) {
+      xpos = 0;
+    }
+  }
+}
