@@ -13,7 +13,8 @@ Syntax highlighted code block
 
 # Header 1
 ## calculator
-[code]
+[code]https://github.com/The-tiny-asian/programing-one/blob/master/code%20for%20calc
+[picture]
 ### etch/sketch
 
 - etch/sketch
