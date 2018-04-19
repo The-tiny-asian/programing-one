@@ -14,7 +14,7 @@ Syntax highlighted code block
 # Header 1
 ## calculator
 [code](https://github.com/The-tiny-asian/programing-one/blob/master/code%20for%20calc)
-[picture]https://github.com/The-tiny-asian/programing-one/raw/master/Screen%20Shot%202018-04-19%20at%201.21.10%20PM.png
+[picture](https://github.com/The-tiny-asian/programing-one/raw/master/Screen%20Shot%202018-04-19%20at%201.21.10%20PM.png)
 ### etch/sketch
 
 - etch/sketch
