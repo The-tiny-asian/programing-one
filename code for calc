@@ -1,0 +1,189 @@
+Button[] numButtons = new Button[10];
+Button[] opButtons = new Button[14];
+String ls, rs;
+float ans;  // answer
+char op;              // Operator
+boolean left, eq;    // Left of Operator, After Equal is Hit
+
+void setup() {
+  size(510, 300);
+  ls = "0";
+  rs = "0";
+  ans = 0.0;
+  op = ' ';
+  left = true;
+  eq = false;
+  numButtons[0] = new Button(10, 240, 80, 40).asNumber(0);
+  numButtons[1] = new Button(10, 200, 60, 40).asNumber(1);
+  numButtons[2] = new Button(70, 200, 60, 40).asNumber(2);
+  numButtons[3] = new Button(130, 200, 60, 40).asNumber(3);
+  numButtons[4] = new Button(10, 160, 60, 40).asNumber(4);
+  numButtons[5] = new Button(70, 160, 60, 40).asNumber(5);
+  numButtons[6] = new Button(130, 160, 60, 40).asNumber(6);
+  numButtons[7] = new Button(10, 120, 60, 40).asNumber(7);
+  numButtons[8] = new Button(70, 120, 60, 40).asNumber(8);
+  numButtons[9] = new Button(130, 120, 60, 40).asNumber(9);
+
+  opButtons[0] = new Button(200, 100, 50, 30).asOperator('C');
+    opButtons[8] = new Button(260, 100, 50, 30).asOperator('s'); // sin
+      opButtons[9] = new Button(320, 100, 50, 30).asOperator('c'); // cos
+        opButtons[10] = new Button(380, 100, 50, 30).asOperator('t'); // tan
+          opButtons[12] = new Button(440, 100, 50, 30).asOperator('E'); // EE
+  opButtons[11] = new Button(200, 140, 50, 30).asOperator('e'); // e
+    opButtons[2] = new Button(260, 140, 50, 30).asOperator('%');
+      opButtons[3] = new Button(320, 140, 50, 30).asOperator('/');
+        opButtons[1] = new Button(380, 140, 50, 30).asOperator('n');
+          opButtons[13] = new Button(440, 140, 50, 30).asOperator('.');
+  opButtons[7] = new Button(200, 180, 50, 30).asOperator('=');
+    opButtons[6] = new Button(260, 180, 50, 30).asOperator('+');
+      opButtons[5] = new Button(320, 180, 50, 30).asOperator('-');
+       opButtons[4] = new Button(380, 180, 50, 30).asOperator('*');
+}
+
+void draw() {
+  background(#FAF7F7);
+  for (int i=0; i<numButtons.length; i++) {
+    numButtons[i].display();
+    numButtons[i].over();
+  }
+  for (int i=0; i<opButtons.length; i++) {
+    opButtons[i].display();
+    opButtons[i].over();
+  }
+  updateDisplay();
+}
+
+void mouseReleased() {
+  // 
+  for (int i=0; i<numButtons.length; i++) {
+    if (numButtons[i].hov && left) {
+      ls += numButtons[i].v;
+    } else if (numButtons[i].hov && !left) {
+      rs += numButtons[i].v;
+    }
+  }
+
+  for (int i=0; i<opButtons.length; i++) {
+    if (opButtons[i].hov && opButtons[i].o == '+') { 
+      left = false;
+      op = opButtons[i].o;
+      rs = "";
+    } else if (opButtons[i].hov && opButtons[i].o == '-') {
+      left = false;
+      op = opButtons[i].o;
+      rs = "";
+    } else if (opButtons[i].hov && opButtons[i].o == '*') {
+      left = false;
+      op = opButtons[i].o;
+      rs = "";
+    } else if (opButtons[i].hov && opButtons[i].o == '/') {
+      left = false;
+      op = opButtons[i].o;
+      rs = "";
+    } else if (opButtons[i].hov && opButtons[i].o == 'C') {
+      performClear();
+    } else if (opButtons[i].hov && opButtons[i].o == '=') {
+      eq = true;
+      performCalc();
+    } else if (opButtons[i].hov && opButtons[i].o == 'n') {
+      if (left) {
+        ans = float(ls)*-1;
+        ls = str((float)ans);
+      } else {
+        ans = float(rs)*-1;
+        rs = str((float)ans);
+      }
+    } else if (opButtons[i].hov && opButtons[i].o == '%') {
+      if (left) {
+        ans = float(ls)*0.01;
+        ls = str((float)ans);
+      } else {
+        ans = float(rs)*0.01;
+        rs = str((float)ans);
+      }
+    } else if (opButtons[i].hov && opButtons[i].o == 's') {
+      if (left) {
+        ans = sin(float(ls));
+        ls = str((float)ans);
+      } else {
+        ans = sin(float(rs));
+        rs = str((float)ans);
+      }
+    } else if (opButtons[i].hov && opButtons[i].o == 'c') {
+      if (left) {
+        ans = cos(float(ls));
+        ls = str((float)ans);
+      } else {
+        ans = cos(float(rs));
+        rs = str((float)ans);
+      }
+    } else if (opButtons[i].hov && opButtons[i].o == '.') {
+      if (left) {
+        ls += opButtons[i].o;
+      } else {
+        rs += opButtons[i].o;
+      }
+    }
+  }
+}
+
+void performCalc() {
+  switch(op) {
+  case '+': 
+    ans = float(ls)+float(rs);
+    ls = str((float)ans);
+    left = true;
+    break;
+  case '-': 
+    ans = float(ls)-float(rs);
+    ls = str((float)ans);
+    left = true;
+    break;
+  case '*': 
+    ans = float(ls)*float(rs);
+    ls = str((float)ans);
+    left = true;
+    break;
+  case '/': 
+    ans = float(ls)/float(rs);
+    ls = str((float)ans);
+    left = true;
+    break;
+  }
+}
+
+void performClear() {
+  ls = "0"; 
+  rs = "0";
+  ans = 0.0;
+  op = ' ';
+  left = true;
+  eq = false;
+}
+
+void updateDisplay() {
+  fill(150);
+  noStroke();
+  fill(150);
+  stroke(0);
+  rect(10, 10, 490, 85, 4);
+  fill(20);
+  textSize(15);
+  text("Left: " + left, 400, 40);
+  text("Op: " + op, 300, 45);
+  text("ls: " + ls, 200, 25); 
+  text("rs: " + rs, 300, 25);
+  text("Ans: " + (float)ans, 400, 25);
+  textSize(33);
+  fill(255);
+   if (eq) {
+    text((float)ans, 15, 80);
+  } else {
+    if (left) {
+      text(ls, 15, 80);
+    } else {
+      text(rs, 15, 80);
+    }
+  }
+  eq = false;
+}
