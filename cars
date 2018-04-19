@@ -1,0 +1,16 @@
+Car myCar;
+Car myCar2;
+
+
+void setup() {
+  size(200, 200);
+  myCar = new Car(color(250),0,100,4);
+  myCar2 = new Car(color(255,0,0),0,60,2);
+}
+void draw () {
+  background(0);
+  myCar.display();
+  myCar.drive();
+  myCar2.display();
+  myCar2.drive();
+}
