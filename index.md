@@ -1,15 +1,6 @@
 ## Welcome to David Kang portfolio
 
-You can use the [editor on GitHub](https://github.com/The-tiny-asian/programing-one/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.ll
-![pic](https://github.com/The-tiny-asian/programing-one/raw/master/profile%20copy.jpeg)
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-
-Syntax highlighted code block
+David kang computer programing 1 portfolio 2017-2018
 
 # Moving cars
 -cars [code](https://github.com/The-tiny-asian/programing-one/blob/master/cars)   [code2](https://github.com/The-tiny-asian/programing-one/blob/master/cars2)
