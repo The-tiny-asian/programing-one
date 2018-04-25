@@ -7,7 +7,7 @@ David kang computer programing 1 portfolio 2017-2018
 
 ![picture](https://github.com/The-tiny-asian/programing-one/raw/master/Screen%20Shot%202018-04-19%20at%201.41.24%20PM.png)
 
-A screensaver that moves cars back and forth ina infinite loop.
+A screensaver that moves cars back and forth in a infinite loop.
 ## Calculator
 -calculator . [code](https://github.com/The-tiny-asian/programing-one/blob/master/code%20for%20calc)
 [code2](https://github.com/The-tiny-asian/programing-one/blob/master/calccode2)
