@@ -25,3 +25,6 @@ Move the arrow keys create a image on the screen.
 
 -chess
 ![pic](https://github.com/The-tiny-asian/programing-one/raw/master/ChessRunning.png)
+
+
+[code](https://github.com/The-tiny-asian/chess/blob/master/Chess/PieceLogic.py)
