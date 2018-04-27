@@ -28,3 +28,4 @@ Move the arrow keys create a image on the screen.
 
 
 [code](https://github.com/The-tiny-asian/chess/blob/master/Chess/PieceLogic.py)
+-Clasic Europian style chess made by Raheem, Bella, Emanual, and David. /All code is not provided due to technichal issues/
