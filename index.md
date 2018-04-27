@@ -22,3 +22,6 @@ Simple traditonal calculator.
 ![picture](https://github.com/The-tiny-asian/programing-one/raw/master/Screen%20Shot%202018-04-13%20at%201.40.24%20PM.png)
 
 Move the arrow keys create a image on the screen.
+
+-chess
+[pic]!(https://github.com/The-tiny-asian/programing-one/raw/master/ChessRunning.png)
